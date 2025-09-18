@@ -1,136 +1,77 @@
-
-````markdown
-# Project Nexus Documentation
+# 💼 Job Board Backend – ProDev BE
 
 ## 📌 Overview
-**Project Nexus** is a knowledge hub documenting major learnings from the **ProDev Backend Engineering program**.  
-It consolidates backend engineering concepts, tools, challenges, and solutions into a single repository, serving as a reference guide for both current and future learners.  
+This project implements the backend for a **Job Board Platform**.  
+It provides APIs for managing job postings, categories, and applications, while enforcing **role-based access control** and ensuring **efficient job search** via optimized database queries.
 
-The project emphasizes **collaboration** between backend and frontend learners to simulate real-world software engineering teamwork.  
-
----
-
-## 🎯 Project Objective
-The objectives of Project Nexus are to:
-
-- Consolidate key learnings from the ProDev Backend Engineering program.  
-- Document major backend technologies, concepts, challenges, and solutions.  
-- Serve as a long-term **reference guide** for backend engineering practices.  
-- Foster **collaboration** between frontend and backend learners.  
+The backend is built using **Django** and **PostgreSQL**, with **JWT authentication** for secure access and **Swagger** for API documentation.
 
 ---
 
-## 🚀 Key Features
-- **Comprehensive Documentation**  
-  Covers backend engineering concepts such as RESTful APIs, GraphQL APIs, Message Queues, CI/CD Pipelines, Celery & RabbitMQ, and System Design.  
-
-- **Challenges & Solutions**  
-  Real-world challenges faced during the program and implemented solutions.  
-
-- **Best Practices & Takeaways**  
-  Industry best practices and personal insights gained.  
-
-- **Collaboration Hub**  
-  Encourages teamwork with ProDev frontend learners to build better systems.  
+## 🎯 Project Goals
+- **API Development**: Expose endpoints for jobs, categories, and applications.  
+- **Access Control**: Implement secure role-based access for admins and users.  
+- **Database Efficiency**: Optimize job search using indexes and query optimization.  
+- **Documentation**: Provide detailed API docs with Swagger.
 
 ---
 
-## 🛠️ Key Technologies
-- **Programming & Frameworks**  
-  - Python  
-  - Django  
-
-- **APIs**  
-  - REST APIs  
-  - GraphQL APIs  
-
-- **Infrastructure & Tools**  
-  - Docker  
-  - CI/CD Pipelines (GitHub Actions, Jenkins)  
-
-- **Asynchronous & Distributed Systems**  
-  - Celery  
-  - RabbitMQ  
+## 🛠 Technologies Used
+| Technology | Purpose |
+|------------|---------|
+| **Django** | High-level Python framework for backend development |
+| **PostgreSQL** | Database for storing job board data |
+| **JWT** | Role-based authentication & authorization |
+| **Swagger (drf-yasg)** | API endpoint documentation |
 
 ---
 
-## 📚 Important Backend Concepts
-- **Database Design**  
-  - Relational databases (PostgreSQL, MySQL)  
-  - ER modeling & normalization  
-  - Indexing strategies for performance  
+## 🔑 Key Features
+### 📝 Job Posting Management
+- CRUD APIs for job postings.  
+- Categorization by **industry, location, and type**.
 
-- **Asynchronous Programming**  
-  - Async views in Django  
-  - Task queues with Celery  
-  - Event-driven systems  
+### 🔐 Role-Based Authentication
+- **Admins**: Manage jobs and categories.  
+- **Users**: Apply for jobs and manage applications.  
 
-- **Caching Strategies**  
-  - Redis caching  
-  - Queryset caching for ORM performance  
-  - HTTP caching (ETags, Cache-Control)  
+### ⚡ Optimized Job Search
+- Efficient query filtering with **indexes**.  
+- Search by **location** and **category**.  
 
-- **System Design**  
-  - Scalability principles  
-  - Load balancing  
-  - Fault tolerance & observability  
+### 📖 API Documentation
+- Swagger UI hosted at `/api/docs`.  
+- Interactive API testing for frontend integration.  
 
 ---
 
-## ⚡ Challenges & Solutions
-- **Challenge:** Handling long-running tasks without blocking user requests  
-  - **Solution:** Offloaded work using Celery + RabbitMQ workers  
-
-- **Challenge:** Ensuring deployment consistency across environments  
-  - **Solution:** Dockerized applications & standardized pipelines with CI/CD  
-
-- **Challenge:** API performance bottlenecks  
-  - **Solution:** Implemented caching layers (Redis) & optimized SQL queries  
-
----
-
-## 🌟 Best Practices & Personal Takeaways
-- Always design APIs with **clear contracts** and proper versioning.  
-- Prioritize **security**: validate inputs, sanitize queries, and manage secrets properly.  
-- Use **asynchronous processing** for scalability.  
-- Write **tests early** and automate them in CI/CD pipelines.  
-- Collaboration between backend and frontend teams is **non-negotiable** for success.  
+## 🚀 Implementation Process
+### 🔹 Git Commit Workflow
+- **Initial Setup**  
+  - `feat: set up Django project with PostgreSQL`  
+- **Feature Development**  
+  - `feat: implement job posting and filtering APIs`  
+  - `feat: add role-based authentication for admins and users`  
+- **Optimization**  
+  - `perf: optimize job search queries with indexing`  
+- **Documentation**  
+  - `feat: integrate Swagger for API documentation`  
+  - `docs: update README with usage details`  
 
 ---
 
-## 🤝 Collaboration - Key for Success
-- **Collaborate with Whom?**  
-  - Frontend learners (consume backend endpoints)  
-  - Backend learners (peer code reviews, joint debugging sessions)  
-
-- **Where to Collaborate?**  
-  - Discord Channel: **#ProDevProjectNexus**  
-
-💡 **ProDev Tip!**  
-- Use the first week to communicate your chosen project.  
-- Identify frontend learners working on the same project and collaborate effectively.  
+## 📂 Submission Details
+- **Deployment**: API and Swagger docs must be hosted and accessible.  
+- **Evaluation Criteria**:
+  - ✅ **Functionality**: CRUD works, RBAC is enforced.  
+  - ✅ **Code Quality**: Modular, Django best practices, normalized DB schema.  
+  - ✅ **Performance**: Indexed queries make job search fast.  
+  - ✅ **Documentation**: Swagger is complete; README provides setup and usage instructions.  
 
 ---
 
-## 📂 Repository Setup
-1. Create a new GitHub repository named **`alx-project-nexus`**.  
-2. Add this file as **`README.md`**.  
-3. Commit and push changes:  
-
-```bash
-git init
-git add README.md
-git commit -m "Initial commit: Project Nexus Documentation"
-git branch -M main
-git remote add origin git@github.com:<your-username>/alx-project-nexus.git
-git push -u origin main
-````
-
----
-
-## ✅ Conclusion
-
-Project Nexus serves as a **living documentation hub** of backend engineering knowledge.
-It captures not only technologies and tools but also the **journey of problem-solving, collaboration, and growth** as a ProDev Backend Engineer.
-
-```
+## ⚙️ Setup Instructions
+1. Clone repo:  
+   ```bash
+   git clone https://github.com/tomogolla/job-board-backend.git
+   cd job-board-backend

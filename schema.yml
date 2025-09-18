@@ -1,0 +1,7 @@
+openapi: 3.0.3
+info:
+  title: AfriRemotely API
+  version: 1.0.0
+  description: Job board platform
+paths: {}
+components: {}
